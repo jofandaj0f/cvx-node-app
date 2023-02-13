@@ -1,0 +1,178 @@
+<div class="grid mb-3" id="ActionFormsBlue">
+    <div class="input-group mb-3">
+        <input type="sender" class="form-control" id="getBlueSendersIP" placeholder="Enter IP Address of Blue MCS">
+        <button type="button" class="btn btn-outline-primary" id="getBlueSenders">Get all Senders</button>
+    </div>
+    <div class="grid mb-3" id="SelectAction">
+        <select class="form-select" aria-label="Default select example" name="Options">
+            <option selected value="hideallBlue">Select Action</option>
+            <option value="delBlueSenders">Delete Senders</option>
+            <option value="addBlueSenders">Add Senders</option>
+            <option value="modBlueBw">Modify Bandwidths </option>
+        </select> 
+    </div>
+    <div class="grid mb-3" id="delBlueSenders" >
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <h2>Delete a Sender</h2>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Blue MCS IP Address</label>
+                    <input type="sender" class="form-control" for="Blue" name="DelSendersip" placeholder="192.168.1.1">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Bandwidth</label>
+                    <input type="sender" class="form-control" for="Blue" name="DelSendersbandwidth" placeholder="2750 = 2.75Gbps">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Bandwidth Type</label>
+                    <input type="sender" class="form-control" for="Blue" name="DelSendersbwType" placeholder="Typically it's m">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Source IP</label>
+                    <input type="sender" class="form-control" for="Blue" name="DelSenderssourceIP" placeholder="192.168.1.1">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Destination IP</label>
+                    <input type="sender" class="form-control" for="Blue" name="DelSendersdestinationIP" placeholder="224.1.1.1">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Incoming Interface ID</label>
+                    <input type="sender" class="form-control" for="Blue" name="DelSendersinIntID" placeholder="001c.738d.1569-Ethernet5">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Tracking ID</label>
+                    <input type="sender" class="form-control" for="Blue" name="DelSenderstrackingID" placeholder="123456789">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <input class="btn btn-secondary" type="submit" value="Submit">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="addBlueSenders" padding="50px">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <h2>Add a Sender</h2>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">IP Address</label>
+                    <input type="sender" class="form-control" for="Blue" name="AddSendersip" placeholder="192.168.1.1">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Bandwidth</label>
+                    <input type="sender" class="form-control" for="Blue" name="AddSendersbandwidth" placeholder="2750 = 2.75Gbps">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Bandwidth Type</label>
+                    <input type="sender" class="form-control" for="Blue" name="AddSendersbwType" placeholder="Typically it's m">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Source IP</label>
+                    <input type="sender" class="form-control" for="Blue" name="AddSenderssourceIP" placeholder="192.168.1.1">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Destination IP</label>
+                    <input type="sender" class="form-control" for="Blue" name="AddSendersdestinationIP" placeholder="224.1.1.1">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Incoming Interface ID</label>
+                    <input type="sender" class="form-control" for="Blue" name="AddSendersinIntID" placeholder="001c.738d.1569-Ethernet5">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Tracking ID</label>
+                    <input type="sender" class="form-control" for="Blue" name="AddSenderstrackingID" placeholder="123456789">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <input class="btn btn-secondary" type="submit" value="Submit">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="modBlueBw" padding="50px">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <h2>Modify a Sender</h2>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">CVX IP Address</label>
+                    <input type="sender" class="form-control" for="Blue" name="modBwip" placeholder="192.168.1.1">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Bandwidth</label>
+                    <input type="sender" class="form-control" for="Blue" name="modBwbandwidth" placeholder="2750 = 2.75Gbps">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Bandwidth Type</label>
+                    <input type="sender" class="form-control" for="Blue" name="modBwbwType" placeholder="Typically it's m">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Source IP</label>
+                    <input type="sender" class="form-control" for="Blue" name="modBwsourceIP" placeholder="192.168.1.1">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Destination IP</label>
+                    <input type="sender" class="form-control" for="Blue" name="modBwdestinationIP" placeholder="224.1.1.1">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Incoming Interface ID</label>
+                    <input type="sender" class="form-control" for="Blue" name="modBwinIntID" placeholder="001c.738d.1569-Ethernet5">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="mb-1">
+                    <label for="ipInput" class="form-label">Tracking ID</label>
+                    <input type="sender" class="form-control" name="modBwtrackingID" placeholder="123456789">
+                </div>
+            </li>
+        </ul>
+        <input class="btn btn-secondary" type="submit" value="Submit">
+    </div>
+</div>

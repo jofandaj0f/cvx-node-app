@@ -1,0 +1,33 @@
+{
+  "name": "cvx-node-js",
+  "version": "1.0.0",
+  "description": "NodeJS App to make API posts to MCS",
+  "main": "app.js",
+  "dependencies": {
+    "axios": "^1.2.5",
+    "body-parser": "^1.20.1",
+    "bootstrap": "^5.3.0-alpha1",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-winston": "^4.2.0",
+    "moment": "^2.29.4",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "^4.5.4"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jofandaj0f/cvx-node-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jofandaj0f/cvx-node-app/issues"
+  },
+  "homepage": "https://github.com/jofandaj0f/cvx-node-app#readme"
+}
