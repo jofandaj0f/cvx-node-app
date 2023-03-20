@@ -8,7 +8,6 @@ pipeline{
         BUILD_ID = "latest"    
         registry = "ferraro/cvx-node-js"
     //     registryCredential = 'ad0dd249-febd-4459-9a91-6faa667d2c30'        
-        GIT_CO
     }
     
     stages{
