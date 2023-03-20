@@ -5,6 +5,7 @@ pipeline {
             agent {
                 dockerfile {
                     dir 'client'
+                    tag 'cvx-app-react'
                 }
             }
             steps {
@@ -15,6 +16,7 @@ pipeline {
             agent {
                 dockerfile {
                     dir 'server'
+                    tag 'cvx-app-nodejs'
                 }
             }
             steps {
