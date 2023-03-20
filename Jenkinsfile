@@ -1,34 +1,26 @@
-pipeline{
-    agent any
-    options{
-        buildDiscarder(logRotator(numToKeepStr: '5', daysToKeepStr: '5'))
-        timestamps()
-    }
-    environment{
-        BUILD_ID = "latest"    
-        registry = "ferraro/cvx-node-js"
-    //     registryCredential = 'ad0dd249-febd-4459-9a91-6faa667d2c30'        
-    }
-    
-    stages{
-       stage('Building image for backend') {
-      steps{
-        script {
-          dockerImage = docker.build("cvx-node-app:latest"
-                        + " ./server/"
-                    )
-          // dockerImage.tag("Backend")
+pipeline {
+    agent none
+    stages {
+        stage('Build Back-end') {
+            agent {
+                dockerfile {
+                    dir 'client'
+                    image 'node:current-alpine3.16'
+                }
+            }
+            steps {
+                sh 'node --v'
+            }
         }
-      }
-    }
-    // stage('Deploy Image') {
-    //   steps{
-    //      script {
-    //         docker.withRegistry( '', registryCredential ) {
-    //         dockerImage.push()
-    //       }
-    //     }
-    //   }
-    // }
+        stage('Build Front-end') {
+            agent {
+                dockerfile {
+                    dir 'server'
+                }
+            }
+            steps {
+                sh 'node --version'
+            }
+        }
     }
 }
