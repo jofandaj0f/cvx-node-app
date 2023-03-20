@@ -3,8 +3,8 @@ import './App.css';
 import React from "react";
  
 // We use Route in order to define the different routes of our application
-import { Route, Routes } from "react-router-dom";
- 
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
 // We import all the components we need in our app
 // import Footer component
 import Footer from "./components/Footer";
@@ -12,14 +12,16 @@ import Footer from "./components/Footer";
 import Header from "./components/Header"; 
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
+import Senders from "./components/MCS/Senders";
  
 const App = () => {
  return (
-   <div class="container">
-     <Header />
-     <Navbar />
-     <Home />
-     <Footer />
+   <div className="container">
+        <Header />
+        <Navbar />
+        <Home />
+        <Senders />
+        <Footer />
    </div>
  );
 };

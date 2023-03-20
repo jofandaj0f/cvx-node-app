@@ -43,13 +43,14 @@ app.use('/mcs', mcs);
 app.use('/', index);
 
 // catch 404 and forward to error handler
-app.use(function(err, req, res) {
+app.use(function(req,res,next) {
     // console.log(res);
+    res.setHeader('Access-Control-Allow-Origin', '*');
     if(res.statusCode === 500){
         return 'Error 500';
     }
     else if(res.statusCode === 404){
-        return err;
+        return 'Error 404';
     }
 });
 //Datadog and New Relic reporting

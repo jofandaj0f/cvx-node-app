@@ -3,8 +3,8 @@ LABEL Created by Jonathan Ferraro
 
 # Create app directory
 RUN echo 'Creating App Directories'
-RUN mkdir -p /usr/src/server
-WORKDIR /usr/src/server
+RUN mkdir -p /usr/src/client
+WORKDIR /usr/src/client
 
 # Install app dependencies
 RUN echo 'Installing via NPM'
@@ -16,8 +16,8 @@ RUN echo 'Copy Source bundle to Container'
 COPY . .
 
 #Open up containers ports app and mysql (3306) respectively
-RUN echo 'Opening Port 3000'
-EXPOSE 3000 
+RUN echo 'Opening Port 3001'
+EXPOSE 3001 
 
 #Start Node for NodeJS
-CMD [ "npm", "start"]
+CMD [ "npm", "run", "build"]
