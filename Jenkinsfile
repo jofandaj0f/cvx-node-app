@@ -14,11 +14,11 @@ pipeline{
        stage('Building image for backend') {
       steps{
         script {
-          dockerImage = docker.build("${registry}:${env.BUILD_ID}",
-                        + " --build-arg PORT=3000",
+          dockerImage = docker.build("${registry}:${env.BUILD_ID}"
+                        + " --build-arg PORT=3000"
                         + " ./server/"
                     )
-          dockerImage.tag("Backend")
+          // dockerImage.tag("Backend")
         }
       }
     }
