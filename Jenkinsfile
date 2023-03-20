@@ -5,7 +5,7 @@ pipeline {
             agent {
                 dockerfile {
                     dir 'client'
-                    image 'node:current-alpine3.16'
+                    args ' -t backend-nodejs-cvx'
                 }
             }
             steps {
@@ -16,6 +16,7 @@ pipeline {
             agent {
                 dockerfile {
                     dir 'server'
+                    args ' -t frontend-reactjs-cvx'
                 }
             }
             steps {
