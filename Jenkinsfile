@@ -14,9 +14,9 @@ pipeline{
        stage('Building image for backend') {
       steps{
         script {
-          dockerImage = docker.build("myImage:${env.BUILD_ID}",
-                        + " --build-arg MY_ARG=myArg"
-                        + " ./client/"
+          dockerImage = docker.build("${registry}:${env.BUILD_ID}",
+                        + " --build-arg PORT=3000",
+                        + " ./server/"
                     )
           dockerImage.tag("Backend")
         }
