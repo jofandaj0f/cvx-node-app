@@ -5,7 +5,6 @@ pipeline {
             agent {
                 dockerfile {
                     dir 'client'
-                    label 'NodeJS-Backend'
                 }
             }
             steps {
@@ -16,7 +15,6 @@ pipeline {
             agent {
                 dockerfile {
                     dir 'server'
-                    label 'React-Frontend'
                 }
             }
             steps {
