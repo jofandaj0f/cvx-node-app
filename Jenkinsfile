@@ -15,7 +15,6 @@ pipeline{
       steps{
         script {
           dockerImage = docker.build("cvx-node-app:latest"
-                        + " --build-arg PORT=3000"
                         + " ./server/"
                     )
           // dockerImage.tag("Backend")
