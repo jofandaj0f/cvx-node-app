@@ -14,7 +14,7 @@ pipeline{
        stage('Building image for backend') {
       steps{
         script {
-          dockerImage = docker.build("${registry}:${env.BUILD_ID}"
+          dockerImage = docker.build("cvx-node-app:latest"
                         + " --build-arg PORT=3000"
                         + " ./server/"
                     )
