@@ -1,27 +1,30 @@
-pipeline {
-    agent none
-    stages {
-        stage('Back-end') {
-            agent {
-                dockerfile {
-                    dir 'client'
-                    tag 'cvx-app-react'
-                }
-            }
-            steps {
-                sh 'node -v'
-            }
-        }
-        stage('Front-end') {
-            agent {
-                dockerfile {
-                    dir 'server'
-                    tag 'cvx-app-nodejs'
-                }
-            }
-            steps {
-                sh 'node --version'
-            }
-        }
+pipeline{
+    agent any
+    options{
+        buildDiscarder(logRotator(numToKeepStr: '5', daysToKeepStr: '5'))
+        timestamps()
     }
+    // environment{
+        
+    //     registry = "ferraro/cvx-node-js"
+    //     registryCredential = 'ad0dd249-febd-4459-9a91-6faa667d2c30'        
+    // }
+    
+    stages{
+       stage('Building image') {
+      steps{
+        script {
+          dockerImage = docker.build registry + ":latest"
+        }
+      }
+    }
+    // stage('Deploy Image') {
+    //   steps{
+    //      script {
+    //         docker.withRegistry( '', registryCredential ) {
+    //         dockerImage.push()
+    //       }
+    //     }
+    //   }
+    // }
 }
